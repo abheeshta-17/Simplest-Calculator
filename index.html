@@ -2,22 +2,27 @@
 <html>
 <head>
     <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1 style="font-size: 60px;">Simple calculator!!!</h1>
-    <h1 style="font-size: 20px;">Enter 2 numbers and operation!!</h1>
+    <div class="calculator">
+        <h1 class="title">Simple Calculator !!!</h1>
+        <p class="subtitle">Enter 2 numbers and choose operation</p>
 
-    <input type="number" id="userInput1" placeholder="first number">
-    <input type="number" id="userInput2" placeholder="second number">
-   
-    <button onclick="sendData('add')">add(a+b)</button>
-    <button onclick="sendData('sub')">subtract(a-b)</button>
-    <button onclick="sendData('mul')">multiply(a*b)</button>
-    <button onclick="sendData('div')">divide(a/b)</button>
-    <button onclick="sendData('mod')">reminder(a%b)</button>
-
+        <input type="number" id="userInput1" placeholder="first number">
+        <input type="number" id="userInput2" placeholder="second number">
+    
+        <div class = "buttons">
+             <button onclick="sendData('add')">add(a+b)</button>
+             <button onclick="sendData('sub')">subtract(a-b)</button>
+             <button onclick="sendData('mul')">multiply(a*b)</button>
+             <button onclick="sendData('div')">divide(a/b)</button>
+             <button onclick="sendData('mod')">reminder(a%b)</button>
+        </div>
     <p id="output"></p>
+    </div>
+    
 
     <script>
         function sendData(type) {
