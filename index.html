@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+    <h1 style="font-size: 60px;">Simple calculator!!!</h1>
+    <h1 style="font-size: 20px;">Enter 2 numbers and operation!!</h1>
+
+    <input type="number" id="userInput1" placeholder="first number">
+    <input type="number" id="userInput2" placeholder="second number">
+   
+    <button onclick="sendData('add')">add(a+b)</button>
+    <button onclick="sendData('sub')">subtract(a-b)</button>
+    <button onclick="sendData('mul')">multiply(a*b)</button>
+    <button onclick="sendData('div')">divide(a/b)</button>
+    <button onclick="sendData('mod')">reminder(a%b)</button>
+
+    <p id="output"></p>
+
+    <script>
+        function sendData(type) {
+            let input1 = Number(document.getElementById("userInput1").value);
+            let input2 = Number(document.getElementById("userInput2").value);
+            if (type === 'add'){
+            document.getElementById("output").innerText = input1 + input2;
+            }
+            else if (type === 'sub'){
+            document.getElementById("output").innerText = input1 - input2;
+            }
+            else if (type === 'mul'){
+            document.getElementById("output").innerText = input1 * input2;
+            }
+            else if (type === 'div'){
+            document.getElementById("output").innerText = input1 / input2;
+            }
+            else if (type === 'mod'){
+            document.getElementById("output").innerText = input1 % input2;
+            }
+
+        }
+    </script>
+
+</body>
+</html>
