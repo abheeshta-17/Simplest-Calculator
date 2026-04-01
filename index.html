@@ -19,6 +19,7 @@
              <button onclick="sendData('mul')">multiply(a*b)</button>
              <button onclick="sendData('div')">divide(a/b)</button>
              <button onclick="sendData('mod')">reminder(a%b)</button>
+             <button onclick="cleardata()">clear</button>
         </div>
     <p id="output"></p>
     </div>
@@ -44,6 +45,11 @@
             document.getElementById("output").innerText = input1 % input2;
             }
 
+        }
+        function cleardata(){
+            document.getElementById("userInput1").value ="";
+            document.getElementById("userInput2").value ="";
+            document.getElementById("output").innerText ="";
         }
     </script>
 
